@@ -1,0 +1,98 @@
+﻿<Page x:Class="wpf8.Pages.RegisterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf8.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RegisterPage">
+
+
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+        </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+        </Style>
+
+        <Style TargetType="Button" BasedOn="{StaticResource Default}"/>
+        <Style TargetType="StackPanel" x:Key="SP">
+            <Setter Property="Background" Value="{DynamicResource BCKG}"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Orientation" Value="Horizontal"/>
+        </Style>
+        <Style TargetType="StackPanel" BasedOn="{StaticResource SP}"/>
+        
+
+        <!--Z-->
+        <Style TargetType="StackPanel" x:Key="Z">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Margin" Value="40,0,0,0"/>
+            <Setter Property="Orientation" Value="Vertical"/>
+        </Style>
+
+        <Style TargetType="StackPanel" x:Key="B" BasedOn="{StaticResource SP}">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+        </Style>
+        
+    </Page.Resources>
+    
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"  >
+            <TextBlock Text="Регистрация нового врача" />
+        </StackPanel>
+
+        <StackPanel  Grid.Row="1"   >
+            <StackPanel Style="{StaticResource Z}">
+                <Label Content="Фамилия:"/>
+                <Label Content="Имя:"/>
+                <Label Content="Отчество:"/>
+                <Label Content="Специализация:"/>
+                <Label Content="Пароль:"/>
+                <Label Content="Подтверждение пароля:"/>
+
+            </StackPanel>
+
+            <!--Z-->
+            <StackPanel  Style="{StaticResource Z}">
+                <TextBox x:Name="LastNameTextBox"/>
+                <TextBox x:Name="NameTextBox" />
+                <TextBox x:Name="MiddleNameTextBox" />
+                <ComboBox x:Name="SpecialisationComboBox" >
+                    <ComboBoxItem Content="Окулист"/>
+                    <ComboBoxItem Content="Психолог"/>
+                    <ComboBoxItem Content="Логопед"/>
+                </ComboBox>
+                <PasswordBox x:Name="PasswordBox1" />
+                <PasswordBox x:Name="PasswordBox2" />
+
+            </StackPanel>
+
+            <TextBlock x:Name="MessageTextBlock"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"  Style="{StaticResource B}" >
+            <Button Content="Назад" Click="BackButton_Click" />
+            <Button Content="Зарегистрировать" Click="RegisterButton_Click" />
+        </StackPanel>
+    </Grid>
+</Page>

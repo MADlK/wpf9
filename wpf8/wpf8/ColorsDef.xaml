@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="Pressed" Color="Green"/>
+    <SolidColorBrush x:Key="Def" Color="Aqua"/>
+    <SolidColorBrush x:Key="MouseOver" Color="Pink"/>
+    <SolidColorBrush x:Key="BCKG" Color="White"/>
+    <SolidColorBrush x:Key="ForeGround" Color="Black"/>
+    
+    
+</ResourceDictionary>
