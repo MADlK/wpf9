@@ -9,65 +9,7 @@
       Title="MainPage">
 
 
-    <Page.Resources>
-        <Style TargetType="Button" BasedOn="{StaticResource Default}"/>
-        <Style TargetType="Label">
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Margin" Value="5,5,5,0"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-        <Style TargetType="Label" x:Key="q">
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Margin" Value="5,5,5,0"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-        </Style>
-        <Style TargetType="TextBlock" x:Key="TBbase">
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="TextWrapping" Value="Wrap"/>
-        </Style>
-
-        <Style TargetType="TextBlock" BasedOn="{StaticResource TBbase}">
-            <Setter Property="Width" Value="120"/>
-            <Setter Property="Margin" Value="10,0,0,0"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-
-            <!--ПИнфо-->
-        <Style TargetType="StackPanel" x:Key="PInfo">
-            <Setter Property="Orientation" Value="Horizontal"/>
-            <Setter Property="Margin" Value="0,5,0,0"/>
-        </Style>
-            <!--ллв-->
-        <Style TargetType="StackPanel" x:Key="LLW" BasedOn="{StaticResource PInfo}">
-            <Setter Property="Margin" Value="0"/>
-        </Style>
-            <!--pib-->
-        <Style TargetType="StackPanel" x:Key="PIB" BasedOn="{StaticResource LLW}">
-            <Setter Property="Margin" Value="20"/>
-        </Style>
-            <!--PHI-->
-        <Style TargetType="ListView" x:Key="PHI">
-            <Setter Property="Height" Value="230"/>
-        </Style>
-
-        <Style TargetType="ListView" BasedOn="{StaticResource PHI}">
-            <Setter Property="Height" Value="460"/>
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="Background" Value="{DynamicResource BCKG}"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-
-       
-
-        <Style TargetType="StackPanel" x:Key="footer">
-            <Setter Property="Orientation" Value="Horizontal"/>
-        </Style>
-        <Style TargetType="StackPanel" >
-            <Setter Property="Background" Value="{DynamicResource BCKG}"/>
-            
-        </Style>
-        
-    </Page.Resources>
+   
     
     
     <Grid>
@@ -88,38 +30,38 @@
 
         <Grid Grid.Row="1" Grid.Column="0" >
             <StackPanel >
-                <Label Content="Информация о пациенте" />
+                <Label Content="Информация о пациенте" Style="{StaticResource MAINLBL}"/>
                 <StackPanel>
                     
                     
                     <!--PInfo-->
                     <StackPanel Style="{StaticResource PInfo}">
-                        <TextBlock Text="ID: " />
+                        <TextBlock Text="ID: " Style="{StaticResource MAINTB}"/>
                         <TextBlock Text="{Binding SelectedPatient.Id}" Style="{StaticResource TBbase}"/>
                     </StackPanel>
 
                     <StackPanel Style="{StaticResource PInfo}">
-                        <TextBlock Text="Фамилия: " />
+                        <TextBlock Text="Фамилия: " Style="{StaticResource MAINTB}"/>
                         <TextBlock Text="{Binding SelectedPatient.LastName}" Style="{StaticResource TBbase}"/>
                     </StackPanel>
 
                     <StackPanel Style="{StaticResource PInfo}">
-                        <TextBlock Text="Имя: " />
+                        <TextBlock Text="Имя: " Style="{StaticResource MAINTB}"/>
                         <TextBlock Text="{Binding SelectedPatient.Name}" Style="{StaticResource TBbase}"/>
                     </StackPanel>
 
                     <StackPanel Style="{StaticResource PInfo}" >
-                        <TextBlock Text="Отчество: " />
+                        <TextBlock Text="Отчество: " Style="{StaticResource MAINTB}"/>
                         <TextBlock Text="{Binding SelectedPatient.MiddleName}" Style="{StaticResource TBbase}"/>
                     </StackPanel>
 
                     <StackPanel Style="{StaticResource PInfo}">
-                        <TextBlock Text="Дата рождения: " />
+                        <TextBlock Text="Дата рождения: " Style="{StaticResource MAINTB}"/>
                         <TextBlock Text="{Binding SelectedPatient.Birthday}" Style="{StaticResource TBbase}"/>
                     </StackPanel>
 
                     <StackPanel Style="{StaticResource PInfo}">
-                        <TextBlock Text="Телефон: " />
+                        <TextBlock Text="Телефон: " Style="{StaticResource MAINTB}"/>
                         <TextBlock Text="{Binding SelectedPatient.PhoneNumber}" Style="{StaticResource TBbase}"/>
                     </StackPanel>
                 </StackPanel>
@@ -132,9 +74,9 @@
                     <Button Content="Изменить информацию" 
                         Click="EditPatientButton_Click"/>
                 </StackPanel>
-                
 
-                <Label Content="История приёмов"  Style="{StaticResource q}"/>
+
+                <Label Content="История приёмов"  Style="{StaticResource qlabel}"/>
 
                 
                 
@@ -146,19 +88,19 @@
                                 
                                 <!--LLV-->
                                 <StackPanel Style="{StaticResource LLW}">
-                                    <TextBlock Text="Дата: " />
+                                    <TextBlock Text="Дата: " Style="{StaticResource MAINTB}"/>
                                     <TextBlock Text="{Binding date}" Style="{StaticResource TBbase}"/>
                                 </StackPanel>
                                 <StackPanel Style="{StaticResource LLW}">
-                                    <TextBlock Text="Диагноз: " />
+                                    <TextBlock Text="Диагноз: " Style="{StaticResource MAINTB}"/>
                                     <TextBlock Text="{Binding Diagnos}"  Style="{StaticResource TBbase}"/>
                                 </StackPanel>
                                 <StackPanel Style="{StaticResource LLW}">
-                                    <TextBlock Text="Рекомендации: " />
+                                    <TextBlock Text="Рекомендации: " Style="{StaticResource MAINTB}"/>
                                     <TextBlock Text="{Binding Recomendations}"  Style="{StaticResource TBbase}"/>
                                 </StackPanel>
                                 <StackPanel Style="{StaticResource LLW}">
-                                    <TextBlock Text="Врач ID: " />
+                                    <TextBlock Text="Врач ID: " Style="{StaticResource MAINTB}"/>
                                     <TextBlock Text="{Binding doctor_id}" Style="{StaticResource TBbase}"/>
                                 </StackPanel>
                             </StackPanel>
@@ -173,24 +115,25 @@
 
                 <ListView  ItemsSource="{Binding Patients}" 
                             SelectedItem="{Binding SelectedPatient}"
+                           Style="{StaticResource PHICHILD}"
                            >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Border >
                                 <StackPanel>
-                                    <TextBlock Text="{Binding LastName}" />
-                                    <TextBlock Text="{Binding Name}"/>
-                                    <TextBlock Text="{Binding MiddleName}"/>
+                                    <TextBlock Text="{Binding LastName}" Style="{StaticResource MAINTB}"/>
+                                    <TextBlock Text="{Binding Name}" Style="{StaticResource MAINTB}"/>
+                                    <TextBlock Text="{Binding MiddleName}" Style="{StaticResource MAINTB}"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="ID: " />
-                                        <TextBlock Text="{Binding Id}" />
+                                        <TextBlock Text="ID: " Style="{StaticResource MAINTB}"/>
+                                        <TextBlock Text="{Binding Id}" Style="{StaticResource MAINTB}"/>
                                     </StackPanel>
                                 </StackPanel>
                             </Border>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Label Content="Список пациентов"   Style="{StaticResource q}" />
+                <Label Content="Список пациентов"   Style="{StaticResource qlabel}" />
                 <Button Content="Создать пациента" Click="CreatePatientButton_Click" Style="{StaticResource ADDBTN}" />
                 <Button Content="Удалить пациента" Click="Button_Click" Style="{StaticResource DELBTN}"  />
 
@@ -200,13 +143,13 @@
         <Border Grid.Row="2" Grid.ColumnSpan="2" >
             <StackPanel Style="{StaticResource footer}"   >
                 <StackPanel Style="{StaticResource footer}" >
-                    <TextBlock Text="Докторов: "/>
-                    <TextBlock Text="{Binding DoctorsCount}"  />
+                    <TextBlock Text="Докторов: " Style="{StaticResource MAINTB}"/>
+                    <TextBlock Text="{Binding DoctorsCount}"  Style="{StaticResource MAINTB}"/>
                 </StackPanel>
 
                 <StackPanel Style="{StaticResource footer}" >
-                    <TextBlock Text="Пациентов: "/>
-                    <TextBlock Text="{Binding PatientsCount}"  />
+                    <TextBlock Text="Пациентов: " Style="{StaticResource MAINTB}"/>
+                    <TextBlock Text="{Binding PatientsCount}"  Style="{StaticResource MAINTB}"/>
                 </StackPanel>
             </StackPanel>
         </Border>

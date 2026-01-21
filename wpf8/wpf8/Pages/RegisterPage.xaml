@@ -10,47 +10,7 @@
 
 
     <Page.Resources>
-        <Style TargetType="TextBlock">
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-        <Style TargetType="TextBox">
-            <Setter Property="Margin" Value="0,0,0,10"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-        <Style TargetType="ComboBox">
-            <Setter Property="Margin" Value="0,0,0,10"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-        <Style TargetType="PasswordBox">
-            <Setter Property="Margin" Value="0,0,0,10"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-
-        <Style TargetType="Button" BasedOn="{StaticResource Default}"/>
-        <Style TargetType="StackPanel" x:Key="SP">
-            <Setter Property="Background" Value="{DynamicResource BCKG}"/>
-            <Setter Property="Margin" Value="10"/>
-            <Setter Property="Orientation" Value="Horizontal"/>
-        </Style>
-        <Style TargetType="StackPanel" BasedOn="{StaticResource SP}"/>
-        
-
-        <!--Z-->
-        <Style TargetType="StackPanel" x:Key="Z">
-            <Setter Property="Width" Value="150"/>
-            <Setter Property="Margin" Value="40,0,0,0"/>
-            <Setter Property="Orientation" Value="Vertical"/>
-        </Style>
-
-        <Style TargetType="StackPanel" x:Key="B" BasedOn="{StaticResource SP}">
-            <Setter Property="HorizontalAlignment" Value="Right"/>
-        </Style>
-
-
-        <Style TargetType="Label" >
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
+       
     </Page.Resources>
     
     
@@ -61,11 +21,11 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0"  >
-            <TextBlock Text="Регистрация нового врача" />
+        <StackPanel Grid.Row="0" Style="{StaticResource RPBASE}" >
+            <TextBlock Text="Регистрация нового врача" Style="{StaticResource BASEREGP}"/>
         </StackPanel>
 
-        <StackPanel  Grid.Row="1"   >
+        <StackPanel  Grid.Row="1"  Style="{StaticResource RPBASE}" >
             <StackPanel Style="{StaticResource Z}">
                 <Label Content="Фамилия:"/>
                 <Label Content="Имя:"/>
@@ -78,20 +38,20 @@
 
             <!--Z-->
             <StackPanel  Style="{StaticResource Z}">
-                <TextBox x:Name="LastNameTextBox"/>
-                <TextBox x:Name="NameTextBox" />
-                <TextBox x:Name="MiddleNameTextBox" />
-                <ComboBox x:Name="SpecialisationComboBox" >
+                <TextBox x:Name="LastNameTextBox" Style="{StaticResource BASEREGPTBOX}"/>
+                <TextBox x:Name="NameTextBox" Style="{StaticResource BASEREGPTBOX}"/>
+                <TextBox x:Name="MiddleNameTextBox" Style="{StaticResource BASEREGPTBOX}"/>
+                <ComboBox x:Name="SpecialisationComboBox" Style="{StaticResource RPCB}" >
                     <ComboBoxItem Content="Окулист"/>
                     <ComboBoxItem Content="Психолог"/>
                     <ComboBoxItem Content="Логопед"/>
                 </ComboBox>
-                <PasswordBox x:Name="PasswordBox1" />
-                <PasswordBox x:Name="PasswordBox2" />
+                <PasswordBox x:Name="PasswordBox1" Style="{StaticResource RPPB}"/>
+                <PasswordBox x:Name="PasswordBox2" Style="{StaticResource RPPB}"/>
 
             </StackPanel>
 
-            <TextBlock x:Name="MessageTextBlock"/>
+            <TextBlock x:Name="MessageTextBlock" Style="{StaticResource BASEREGP}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2"  Style="{StaticResource B}" >

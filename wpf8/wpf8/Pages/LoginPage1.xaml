@@ -9,56 +9,18 @@
       Title="LoginPage1">
 
     <Page.Resources>
-        <Style TargetType="Button" BasedOn="{StaticResource Default}">
-            <Setter Property="Margin" Value="40,20,40,15"/>
-            <Setter Property="FontSize" Value="14"/>
-        </Style>
-        <Style TargetType="PasswordBox">
-            <Setter Property="Height" Value="35"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Padding" Value="5"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-        <Style TargetType="Label">
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-        <Style TargetType="TextBox">
-            <Setter Property="Height" Value="35"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Padding" Value="5"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-
-        <Style TargetType="TextBlock">
-            <Setter Property="FontSize" Value="24"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Margin" Value="30"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-        <Style TargetType="StackPanel">
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Width" Value="300"/>
-        </Style>
-        <Style TargetType="Border">
-            <Setter Property="Margin" Value="20"/>
-            <Setter Property="Background" Value="{DynamicResource BCKG}"/>
-            <Setter Property="BorderBrush" Value="black"/>
-            <Setter Property="BorderThickness" Value="2"/>
-        </Style>
+        
     </Page.Resources>
 
-    <Border Grid.Column="0">
-        <StackPanel>
-            <TextBlock Text="Вход"/>
-            <Label Content="ID врача:"/>
-            <TextBox x:Name="IdTextBox"/>
-            <Label Content="Пароль:" />
-            <PasswordBox x:Name="PasswordBox"/>
-            <Button Content="Войти" Click="LoginButton_Click" />
-            <Button Content="Регистрация" Click="RegisterButton_Click"/>
+    <Border Grid.Column="0" Style="{StaticResource lp1B}">
+        <StackPanel Style="{StaticResource LP1SP}">
+            <TextBlock Text="Вход" Style="{StaticResource LP1TBlock}"/>
+            <Label Content="ID врача:" Style="{StaticResource LBLLP1}"/>
+            <TextBox x:Name="IdTextBox" Style="{StaticResource LP1TBOX}"/>
+            <Label Content="Пароль:" Style="{StaticResource LBLLP1}"/>
+            <PasswordBox x:Name="PasswordBox" Style="{StaticResource LPPBB}"/>
+            <Button Content="Войти" Click="LoginButton_Click" Style="{StaticResource LP1BTN}"/>
+            <Button Content="Регистрация" Click="RegisterButton_Click" Style="{StaticResource LP1BTN}"/>
         </StackPanel>
     </Border>
 </Page>

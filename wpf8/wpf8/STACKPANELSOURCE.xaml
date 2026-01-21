@@ -1,0 +1,294 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    
+    <!--APPOINTMENT-->
+    <Style TargetType="Button" BasedOn="{StaticResource Default}"/>
+    <Style TargetType="StackPanel" x:Key="BASESP">
+        <Setter Property="Background" Value="{DynamicResource BCKG}"/>
+    </Style>
+    <Style TargetType="Grid" >
+        <Setter Property="Background" Value="{DynamicResource BCKG}"/>
+    </Style>
+    <Style TargetType="StackPanel" BasedOn="{StaticResource BASESP}" x:Key="AppointbaseSP">
+        <Setter Property="Margin" Value="10"/>
+    </Style>
+
+    <Style TargetType="StackPanel" BasedOn="{StaticResource AppointbaseSP}" x:Key="LVT">
+        <Setter Property="Margin" Value="0,0,0,10"/>
+    </Style>
+    <Style TargetType="StackPanel" x:Key="LVTchild" BasedOn="{StaticResource AppointbaseSP}">
+        <Setter Property="Orientation" Value="Horizontal"/>
+    </Style>
+    <Style TargetType="StackPanel" x:Key="DownP" BasedOn="{StaticResource AppointbaseSP}">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="Margin" Value="10"/>
+    </Style>
+
+
+
+    <Style TargetType="Label" >
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+
+
+    <Style TargetType="Label" x:Key="AppointbaseLbl">
+        <Setter Property="Margin" Value="0,10,0,0"/>
+        
+    </Style>
+    <Style TargetType="Label" x:Key="new" BasedOn="{StaticResource AppointbaseLbl}">
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+
+    <Style TargetType="TextBlock" x:Key="BASETEXTBLOCK">
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+
+   
+
+    <Style TargetType="TextBox" x:Key="APPOINTTB">
+        <Setter Property="Height" Value="80"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="AcceptsReturn" Value="True"/>
+    </Style>
+
+
+    <Style TargetType="ListView" x:Key="BASELV" >
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+
+    <Style TargetType="ListView" x:Key="APPOINTLV">
+        <Setter Property="Height" Value="400"/>
+    </Style>
+
+
+
+    <!--CREATEPATIENPAGE-->
+    <Style TargetType="StackPanel" BasedOn="{StaticResource BASESP}" x:Key="baseCreatP">
+        <Setter Property="Margin" Value="20"/>
+    </Style>
+    <Style TargetType="StackPanel" x:Key="v">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="BASECREATP" BasedOn="{StaticResource BASETEXTBLOCK}">
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        
+    </Style>
+
+
+    <Style TargetType="Button" x:Key="BASEBTNCREATEP" BasedOn="{StaticResource Default}">
+        <Setter Property="Margin" Value="0,0,10,0"/>
+        <Setter Property="Padding" Value="10" />
+    </Style>
+    <Style TargetType="DatePicker">
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="q" BasedOn="{StaticResource BASECREATP}">
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+
+    <!--EDITPATIENPAGE-->
+    
+    <Style TargetType="TextBlock">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    <Style TargetType="TextBox">
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    <Style TargetType="TextBox" x:Key="BASETEXTBOX">
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    <Style TargetType="StackPanel" x:Key="qw">
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Background" Value="{DynamicResource BCKG}"/>
+    </Style>
+
+    <Style TargetType="StackPanel" BasedOn="{StaticResource qw}" x:Key="qwe">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Background" Value="Transparent"/>
+    </Style>
+
+    
+        <!--LISTPAGE-->
+  
+    <Style TargetType="StackPanel" x:Key="qo">
+        <Setter Property="Orientation" Value="Horizontal"/>
+    </Style>
+    <Style TargetType="StackPanel" x:Key="LISTPAGESP" BasedOn="{StaticResource qo}">
+        <Setter Property="Background" Value="{DynamicResource BCKG}"/>
+    </Style>
+    <Style x:Key="LVLP" TargetType="ListView">
+        <Setter Property="Background" Value="{DynamicResource BCKG}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    
+
+   
+    
+    
+        <!--LOGINPAGE1-->
+    <Style TargetType="Button" x:Key="LP1BTN" BasedOn="{StaticResource Default}">
+        <Setter Property="Margin" Value="40,20,40,15"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+    <Style TargetType="PasswordBox" x:Key="LPPBB">
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    <Style TargetType="Label" x:Key="LBLLP1">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    <Style TargetType="TextBox" x:Key="LP1TBOX" BasedOn="{StaticResource BASETEXTBOX}">
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="LP1TBlock">
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Margin" Value="30"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    <Style TargetType="StackPanel" x:Key="LP1SP">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="300"/>
+    </Style>
+    <Style TargetType="Border" x:Key="lp1B">
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="Background" Value="{DynamicResource BCKG}"/>
+        <Setter Property="BorderBrush" Value="black"/>
+        <Setter Property="BorderThickness" Value="2"/>
+    </Style>
+    
+        <!--MAINPAGE-->
+    
+    <Style TargetType="Label" x:Key="MAINLBL">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="5,5,5,0"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    <Style TargetType="Label" x:Key="qlabel">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="5,5,5,0"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="TBbase">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="MAINTB" BasedOn="{StaticResource TBbase}">
+        <Setter Property="Width" Value="120"/>
+        <Setter Property="Margin" Value="10,0,0,0"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+
+    <!--ПИнфо-->
+    <Style TargetType="StackPanel" x:Key="PInfo">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="Margin" Value="0,5,0,0"/>
+    </Style>
+    <!--ллв-->
+    <Style TargetType="StackPanel" x:Key="LLW" BasedOn="{StaticResource PInfo}">
+        <Setter Property="Margin" Value="0"/>
+    </Style>
+    <!--pib-->
+    <Style TargetType="StackPanel" x:Key="PIB" BasedOn="{StaticResource LLW}">
+        <Setter Property="Margin" Value="20"/>
+    </Style>
+    <!--PHI-->
+    <Style TargetType="ListView" x:Key="PHI">
+        <Setter Property="Height" Value="230"/>
+    </Style>
+
+    <Style TargetType="ListView" x:Key="PHICHILD" BasedOn="{StaticResource PHI}">
+        <Setter Property="Height" Value="460"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Background" Value="{DynamicResource BCKG}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+
+
+
+    <Style TargetType="StackPanel" x:Key="footer">
+        <Setter Property="Orientation" Value="Horizontal"/>
+    </Style>
+   
+    
+        <!--REGISTRPAGE-->
+    <Style TargetType="TextBlock" x:Key="BASEREGP">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    <Style TargetType="TextBox" x:Key="BASEREGPTBOX">
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    <Style x:Key="RPCB" TargetType="ComboBox">
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    <Style TargetType="PasswordBox" x:Key="RPPB">
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+
+    
+    <Style TargetType="StackPanel" x:Key="SP">
+        <Setter Property="Background" Value="{DynamicResource BCKG}"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Orientation" Value="Horizontal"/>
+    </Style>
+    <Style x:Key="RPBASE" TargetType="StackPanel" BasedOn="{StaticResource SP}"/>
+
+
+    <!--Z-->
+    <Style TargetType="StackPanel" x:Key="Z">
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="Margin" Value="40,0,0,0"/>
+        <Setter Property="Orientation" Value="Vertical"/>
+    </Style>
+
+    <Style TargetType="StackPanel" x:Key="B" BasedOn="{StaticResource SP}">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+    </Style>
+
+
+    
+    
+        <!--TOGGLEE-->
+    <Style TargetType="Menu">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    <Style TargetType="MenuItem">
+        <Setter Property="Background" Value="{DynamicResource BCKG}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+    
+    <!--USERFORMPAGE-->
+    
+    <Style x:Key="UFMSP" TargetType="StackPanel">
+        <Setter Property="Background" Value="White"/>
+    </Style>
+    <Style TargetType="TextBox" x:Key="TBOXUFM">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+    </Style>
+</ResourceDictionary>

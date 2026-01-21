@@ -8,6 +8,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="ColorsDef.xaml"/>
                 <ResourceDictionary Source="BtnStyle.xaml"/>
+                <ResourceDictionary Source="STACKPANELSOURCE.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
         

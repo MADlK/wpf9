@@ -8,17 +8,7 @@
       d:DesignHeight="20" d:DesignWidth="100"
       Title="togglee">
 
-    <Page.Resources>
-        <Style TargetType="Menu">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-        <Style TargetType="MenuItem">
-            <Setter Property="Background" Value="{DynamicResource BCKG}"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-
-    </Page.Resources>
+   
     
     <Grid>
         <Menu VerticalAlignment="Top" HorizontalAlignment="Center">

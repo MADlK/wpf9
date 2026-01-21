@@ -61,5 +61,8 @@
     <Page Update="Pages\togglee.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="STACKPANELSOURCE.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>

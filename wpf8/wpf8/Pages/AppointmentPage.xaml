@@ -8,53 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AppointmentPage">
 
-    <Page.Resources>
-        <Style TargetType="Label">
-            <Setter Property="Margin" Value="0,10,0,0"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-        <Style TargetType="Label" x:Key="new">
-            <Setter Property="FontSize" Value="14"/>
-        </Style>
-  
-        <Style TargetType="StackPanel">
-            <Setter Property="Margin" Value="10"/>
-            <Setter Property="Background" Value="{DynamicResource BCKG}"/>
-        </Style>
-        <Style TargetType="StackPanel" x:Key="LVT">
-            <Setter Property="Margin" Value="0,0,0,10"/>
-        </Style>
-        <Style TargetType="StackPanel" x:Key="LVTchild">
-            <Setter Property="Orientation" Value="Horizontal"/>
-        </Style>
-        <Style TargetType="StackPanel" x:Key="DownP">
-            <Setter Property="Orientation" Value="Horizontal"/>
-            <Setter Property="Margin" Value="10"/>
-        </Style>
-
-        <Style TargetType="Button" BasedOn="{StaticResource Default}">
-            
-        </Style>
-
-        <Style TargetType="TextBlock" >
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-
-        <Style TargetType="TextBox" >
-            <Setter Property="Height" Value="80"/>
-            <Setter Property="TextWrapping" Value="Wrap"/>
-            <Setter Property="AcceptsReturn" Value="True"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-
-        <Style TargetType="ListView">
-            <Setter Property="Height" Value="400"/>
-            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
-        </Style>
-        
-
-    </Page.Resources>
+    
     
     
     <Grid>
@@ -65,7 +19,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" >
-            <TextBlock Text="Приём пациента" />
+            <TextBlock Text="Приём пациента"  />
             <TextBlock x:Name="PatientInfoText" />
         </StackPanel>
 
@@ -75,14 +29,14 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0"  >
+            <StackPanel Grid.Column="0"  Style="{StaticResource AppointbaseSP}">
                 <Label Content="Новый приём" Style="{StaticResource new}"/>
 
                 <Label Content="Диагноз:"/>
-                <TextBox x:Name="DiagnosisTextBox"/>
+                <TextBox x:Name="DiagnosisTextBox" Style="{StaticResource APPOINTTB}"/>
 
                 <Label Content="Рекомендации:" />
-                <TextBox x:Name="RecommendationsTextBox"/>
+                <TextBox x:Name="RecommendationsTextBox" Style="{StaticResource APPOINTTB}"/>
 
                 <Button Content="Сохранить приём" Click="SaveAppointmentButton_Click"/>
             </StackPanel>
@@ -90,7 +44,7 @@
             <StackPanel Grid.Column="1" >
                 <Label Content="История приёмов" Style="{StaticResource new}"/>
 
-                <ListView x:Name="AppointmentsListView" >
+                <ListView x:Name="AppointmentsListView" Style="{StaticResource APPOINTLV}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Style="{StaticResource LVT}">
