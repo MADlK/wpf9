@@ -7,6 +7,8 @@
         <Setter Property="MinWidth" Value="160"/>
         <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
     </Style>
+    
+    
 
     <Style TargetType="Button" BasedOn="{StaticResource abc}"  x:Key="Default">
         <Setter Property="Template">
@@ -31,5 +33,61 @@
                 <Setter Property="Background" Value="{DynamicResource Pressed}"/>
             </Trigger>
         </Style.Triggers>
+        
+        
     </Style>
+
+
+
+    <Style TargetType="Button" BasedOn="{StaticResource Default}"  x:Key="DELBTN">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background = "{TemplateBinding Background}"
+            BorderBrush = "{TemplateBinding BorderBrush}"
+            Height = "{TemplateBinding Height}"
+            Width="{TemplateBinding Width}"
+            CornerRadius="10">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4"/>
+                            <TextBlock VerticalAlignment="Center" Text="🗑️" />
+                        </StackPanel>
+                        
+                    </Border>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+       
+       
+
+
+    </Style>
+
+    <Style TargetType="Button" BasedOn="{StaticResource Default}"  x:Key="ADDBTN">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background = "{TemplateBinding Background}"
+        BorderBrush = "{TemplateBinding BorderBrush}"
+        Height = "{TemplateBinding Height}"
+        Width="{TemplateBinding Width}"
+        CornerRadius="10">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4"/>
+                            <TextBlock VerticalAlignment="Center" Text="+" />
+                        </StackPanel>
+
+                    </Border>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+
+
+
+    </Style>
+
+
 </ResourceDictionary>

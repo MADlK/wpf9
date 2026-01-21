@@ -41,8 +41,8 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <StackPanel Style="{StaticResource q}">
-            <Button Click="AddButton_Click" Content="Добавить"/>
-            <Button Click="DeleteItem_Click" Content="Удалить"/>
+            <Button Click="AddButton_Click" Content="Добавить" Style="{StaticResource ADDBTN}"/>
+            <Button Click="DeleteItem_Click" Content="Удалить" Style="{StaticResource DELBTN}"/>
         </StackPanel>
         <ListView 
             Grid.Row="1"

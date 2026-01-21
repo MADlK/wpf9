@@ -68,7 +68,7 @@
 
         <StackPanel Grid.Row="2" Style="{StaticResource qw}">
             <Button Content="Назад" Click="BackButton_Click"/>
-            <Button Content="Сохранить" Click="SaveButton_Click"/>
+            <Button Content="Сохранить" Click="SaveButton_Click" Style="{StaticResource ADDBTN}"/>
         </StackPanel>
     </Grid>
 </Page>

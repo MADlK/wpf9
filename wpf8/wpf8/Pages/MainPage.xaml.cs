@@ -301,5 +301,30 @@ namespace wpf8.Pages
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        private void Button_Click (object sender, RoutedEventArgs e)
+        {
+            if (SelectedPatient == null)
+            {
+                MessageBox.Show("Пациент н выбран");
+                return;
+            }
+
+            string DelP = SelectedPatient.Id.ToString();
+            string PathD = Path.Combine("Pacients", $"P_{DelP}.json");
+            if (File.Exists(PathD))
+            {
+                File.Delete(PathD);
+                MessageBox.Show("Пациент удален");
+            }
+            else
+            {
+                MessageBox.Show("такой файл не найден");
+            }
+
+            LoadAllPatients();
+
+
+        }
     }
 }

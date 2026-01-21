@@ -46,7 +46,11 @@
         <Style TargetType="StackPanel" x:Key="B" BasedOn="{StaticResource SP}">
             <Setter Property="HorizontalAlignment" Value="Right"/>
         </Style>
-        
+
+
+        <Style TargetType="Label" >
+            <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
+        </Style>
     </Page.Resources>
     
     
@@ -92,7 +96,7 @@
 
         <StackPanel Grid.Row="2"  Style="{StaticResource B}" >
             <Button Content="Назад" Click="BackButton_Click" />
-            <Button Content="Зарегистрировать" Click="RegisterButton_Click" />
+            <Button Content="Зарегистрировать" Click="RegisterButton_Click" Style="{StaticResource ADDBTN}" />
         </StackPanel>
     </Grid>
 </Page>

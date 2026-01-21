@@ -43,7 +43,7 @@
             <TextBox Text="{Binding Age}"/>
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <Button Click="AddButton_Click" Content="Сохранить"/>
+            <Button Click="AddButton_Click" Content="Сохранить" Style="{StaticResource ADDBTN}"/>
             <Button Click="BackButton_Click" Content="Назад"/>
         </StackPanel>
 

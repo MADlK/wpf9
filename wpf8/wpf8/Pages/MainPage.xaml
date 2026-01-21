@@ -57,7 +57,7 @@
             <Setter Property="Foreground" Value="{DynamicResource ForeGround}"/>
         </Style>
 
-
+       
 
         <Style TargetType="StackPanel" x:Key="footer">
             <Setter Property="Orientation" Value="Horizontal"/>
@@ -108,7 +108,7 @@
                         <TextBlock Text="{Binding SelectedPatient.Name}" Style="{StaticResource TBbase}"/>
                     </StackPanel>
 
-                    <StackPanel Style="{StaticResource PInfo}">
+                    <StackPanel Style="{StaticResource PInfo}" >
                         <TextBlock Text="Отчество: " />
                         <TextBlock Text="{Binding SelectedPatient.MiddleName}" Style="{StaticResource TBbase}"/>
                     </StackPanel>
@@ -172,7 +172,8 @@
             <StackPanel>
 
                 <ListView  ItemsSource="{Binding Patients}" 
-                            SelectedItem="{Binding SelectedPatient}">
+                            SelectedItem="{Binding SelectedPatient}"
+                           >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Border >
@@ -190,7 +191,8 @@
                     </ListView.ItemTemplate>
                 </ListView>
                 <Label Content="Список пациентов"   Style="{StaticResource q}" />
-                <Button Content="Создать пациента" Click="CreatePatientButton_Click"  />
+                <Button Content="Создать пациента" Click="CreatePatientButton_Click" Style="{StaticResource ADDBTN}" />
+                <Button Content="Удалить пациента" Click="Button_Click" Style="{StaticResource DELBTN}"  />
 
             </StackPanel>
         </Border>

@@ -57,7 +57,7 @@
             <TextBox x:Name="IdTextBox"/>
             <Label Content="Пароль:" />
             <PasswordBox x:Name="PasswordBox"/>
-            <Button Content="Войти" Click="LoginButton_Click"/>
+            <Button Content="Войти" Click="LoginButton_Click" />
             <Button Content="Регистрация" Click="RegisterButton_Click"/>
         </StackPanel>
     </Border>
